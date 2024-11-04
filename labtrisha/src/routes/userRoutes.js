@@ -10,7 +10,8 @@ router.post('/signup', async (req, res) => {
 
 // Login route
 router.post('/login', async (req, res) => {
-
+    const { username, password } = req.body;
+    const user = await userModel.findOne({ username, password });
     if (user) {
         res.json({ message: 'Login successful' });
     } else {
