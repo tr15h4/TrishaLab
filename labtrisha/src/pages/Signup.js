@@ -1,6 +1,3 @@
-
-pages/Signup.js
-Signup page with event handling to capture form input values.
 import React, { useState } from 'react';
 
 function Signup() {
@@ -23,8 +20,8 @@ function Signup() {
   return (
     <div>
       <h2>Signup</h2>
-      <input name="username" placeholder="Username" onChange={…….} />
-      <input name="email" placeholder="Email" onChange={……. } />
+      <input name="username" placeholder="Username" onChange={handleSignup} />
+      <input name="email" placeholder="Email" onChange={handleSignup} />
       <input name="password" type="password" placeholder="Password" onChange={handleChange} />
       <button onClick={handleSignup}>Signup</button>
     </div>
@@ -32,6 +29,9 @@ function Signup() {
 }
 
 export default Signup;
+
+
+
 
 
 
